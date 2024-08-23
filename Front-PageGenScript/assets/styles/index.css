@@ -1,0 +1,135 @@
+body {
+    background-color: #282c34;
+    color: #abb2bf;
+    font-family: 'Fira Code', monospace;
+}
+
+.list-cl {
+    margin-top: 5%;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.text-file {
+    margin-bottom: 5%;
+}
+.ide-container {
+    display: flex;
+    height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.file-explorer {
+    width: 20%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid #444;
+}   
+
+.files-container {
+
+    background-color: #282C34;
+    display: flex;
+    justify-content: center;
+
+}
+
+.editor {
+    width: 50%;
+    padding: 20px;
+    background-color: #282a36;
+    color: #f8f8f2;
+    border-right: 2px solid #444;
+}
+
+.editor-content {
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    width: 100%;
+    height: calc(100% - 50px);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    white-space: pre;
+    overflow: auto;
+    outline: none;
+    spellcheck: false;
+}
+
+.preview {
+    width: 30%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+}
+
+.btn-custom {
+    background-color: #61afef;
+    color: #282c34;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #528bff;
+}
+
+.btn-danger-custom {
+    background-color: #e06c75;
+    color: #282c34;
+}
+
+.btn-danger-custom:hover {
+    background-color: #be5046;
+}
+
+.active-file {
+    background-color: #61afef !important;
+    color: white !important;
+}
+
+.token-keyword {
+    color: #8be9fd;
+}
+
+.token-string {
+    color: #f1fa8c;
+}
+
+.token-number {
+    color: #ff79c6;
+}
+
+.token-symbol {
+    color: #ffb86c;
+}
+
+.token-error {
+    color: #ff5555;
+}
+
+.token-comment {
+color: #5c6370;
+}
+
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PageGenScript</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Custom Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/index.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="ide-container">
+                <!-- Explorador de archivos -->
+                <div class="file-explorer shadow-lg  text-center">
+                    <div class="logo-container">
+                        <img src="assets/img/logo.png" alt="PageGenScript Logo" class="logo mb-4">
+                    </div>
+            
+                    <h4 class="text-white text-file">Explorador de Archivos</h4>
+                    <div class="files-container">
+                        <ul id="fileList" class="list-group list-cl">
+                            <!-- Archivos se cargarán aquí -->
+                        </ul>
+                    </div>
+                    <button class="btn btn-custom mt-3 w-full" onclick="createNewFile()">Crear Nuevo Archivo</button>
+                    <button class="btn btn-danger-custom mt-3 w-full" onclick="deleteFile()">Eliminar Archivo</button>
+                    <button class="btn btn-custom mt-3 w-full" onclick="document.getElementById('fileInput').click()">Importar Archivo</button>
+                    <input type="file" id="fileInput" style="display:none;" onchange="handleFileUpload(event)">
+
+
+                    <div class="switch-container text-center mt-3">
+                        <label for="backendSwitch" class="form-label">Selecciona el Backend:</label>
+                        <select id="backendSwitch" class="form-select">
+                            <option value="java" selected>Java</option>
+                            <option value="python">Python</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Editor de código -->
+                <div class="editor shadow-lg">
+                    <div id="editor" class="editor-content" contenteditable="true" spellcheck="false" oninput="highlightSyntax()" onkeydown="handleKeyDown(event)"></div>
+                    <button class="btn btn-custom mt-3" onclick="runDSL()">Ejecutar</button>
+                    <button class="btn btn-custom mt-3" onclick="downloadFile()">Descargar Archivo</button>
+                </div>
+    
+                <!-- Vista previa -->
+                <div class="preview shadow-lg">
+                    <h4 class="text-center">Tokens</h4>
+                    <div id="preview">
+                        <!-- Aquí se mostrarán los resultados -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+</body>
+</html>
